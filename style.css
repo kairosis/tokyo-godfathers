@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body,
+html {
+  margin: 0;
+  background-color: #f8f5f2;
+  color: #222525;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+}
+
+/* navigation bar */
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #f8f5f2;
+  opacity: 0.9;
+  z-index: 2;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 20px;
+  width: 800px;
+}
+
+li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+li a {
+  text-decoration: none;
+  color: #222525;
+}
+
+li a:hover {
+  color: #078080;
+}
+
+/* header image */
+
+.header-image {
+  width: 100%;
+  height: 450px;
+  position: relative;
+}
+
+.cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* keeps aspect ratio of the image and fills the given dimension. */
+  opacity: 0.9;
+}
+
+.title-text {
+  width: 800px;
+  height: auto;
+  opacity: 0.9;
+  padding: 20px;
+  z-index: 1;
+  color: white;
+  font-size: 31px;
+  /* center the "absolute" element. solution from [https://stackoverflow.com/questions/8508275/how-to-center-a-position-absolute-element] */
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  /* position the text */
+  top: 240px;
+}
+
+/* containers */
+
+.main-content,
+footer {
+  margin: 0 auto;
+}
+
+.main-content {
+  width: 800px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 20px;
+}
+
+footer {
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  text-decoration-color: #078080;
+  color: inherit;
+}
+
+footer a:hover {
+  color: #078080;
+  text-decoration: none;
+}
+
+/* video */
+
+/* I copied the below code for the youtube video display from [https://webmasters.stackexchange.com/questions/77928/how-to-make-youtube-video-responsive] to fix the video display issue in this page.
+
+Setting width to 100% and height to auto doesn't work here. 
+
+Specifying the specific width and height of the container fix the problem, but it's not very efficient in different screen size display, so I use the abovementioned workable code here as a quick fix. */
+
+.video-container {
+  width: 100%;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* table */
+
+.responsive-table {
+  overflow-x: auto; /* make it responsive */
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+}
+
+td,
+th {
+  text-align: left;
+  padding-right: 13px;
+  padding-bottom: 9px;
+  padding-top: 9px;
+}
+
+th {
+  background-color: #eee;
+}
+
+.table-img {
+  width: 6em;
+  height: 6em;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+/* paragraphs and other elements */
+
+/* h2 {
+  text-decoration: underline;
+  text-decoration-color: #078080;
+  text-decoration-thickness: 14%;
+} */
+
+/* leave it here just in case I make adjustments in the future */
+
+.content-img-1 {
+  float: left;
+  width: 50%;
+  margin: 0.8em;
+  margin-left: 0;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.content-img-2 {
+  float: right;
+  width: 53%;
+  margin: 0.8em;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.content-img-3 {
+  float: left;
+  width: 97%;
+  margin: 0.8em;
+  margin-left: 0;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+/* media queries */
+
+@media (max-width: 800px) {
+  .title-text {
+    font-size: 19px;
+    width: 90%;
+    top: 190px;
+  }
+
+  ul {
+    width: 90%;
+  }
+
+  .main-content {
+    width: 90%;
+  }
+
+  .header-image {
+    height: 350px;
+  }
+}
+
+@media (max-width: 481px) {
+  .title-text {
+    top: 200px;
+  }
+
+  .header-image {
+    height: 330px;
+  }
+}

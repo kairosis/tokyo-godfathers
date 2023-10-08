@@ -95,12 +95,12 @@ footer {
   align-items: center;
 }
 
-footer a {
+a {
   text-decoration-color: #078080;
   color: inherit;
 }
 
-footer a:hover {
+a:hover {
   color: #078080;
   text-decoration: none;
 }
